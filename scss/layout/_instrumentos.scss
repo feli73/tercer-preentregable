@@ -1,0 +1,65 @@
+/* Instrumentos */
+
+
+.encabezado{
+    background-color: #2fcdcd;
+    color: white;
+    height: 80px;
+    padding-left: 50px ;
+    padding-top: 20px;
+
+}
+
+
+
+
+
+.imagen {
+    width: 20%;
+    border-radius: 20%;
+    
+}
+
+footer{
+    background-color: #2fcdcd;
+    color: white;
+}
+
+
+
+ 
+
+    .container3{
+        background: url(../img/banda.jpg) no-repeat ;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        
+        
+    }
+
+    .parrafo2{
+        padding-top: 50px;
+        padding-left: 500px;
+        color:white;
+        
+    }
+
+    @media screen and (max-width: 650px ){
+    
+        .imagen{
+            
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+           
+        }
+
+        .parrafo2{
+            padding-left: 0;
+
+     }
+    }
+   
+    
+    
