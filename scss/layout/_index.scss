@@ -1,13 +1,35 @@
 
 
+//VARIABLES
+$color-principal: #2fcdcd;
+$color-secundario: white;
+$color-tercero:#2c3e50;
+$color-cuarto:aquamarine; 
+
+
+
+.color-5 {
+    background: blue;
+}
+
+    
+@mixin estilos($altura, $borde, $color, $size,  $top) {
+    height: $altura;
+    border-radius: $borde;
+    color: $color;
+    font-size: $size;
+    padding-top: $top;
+    }
+
+
+
 /* Index  */
 
 
-
-
 header {
-    nav{
-        background: #2fcdcd;
+
+    nav {
+        background: $color-principal;
         height:80px;
         width: 100%;
     }
@@ -25,7 +47,7 @@ header {
             margin: 0 5px;
 
             a {
-                color: #fff;
+                color: $color-secundario;
                 font-size: 18px;
                 padding: 7px 13px;
                 border-radius: 3px;
@@ -44,25 +66,27 @@ header {
     .enlace {
     position: absolute;
     padding: 10px 50px;
-    color: white
+    color: $color-secundario
     }
     
     .logo{
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    font-size: 30px;
-    padding-top: 10px;
+    
+        @include estilos(50px, 50%, $color-secundario,30px ,10px )
+    
     }
     
     
     li a.active, li a:hover {
-    background: #000090;
+
+     @extend .color-5;
+
+
     transition: .5s;
     }
+
     .checkbtn{
     font-size: 30px;
-    color: #fff;
+    color: $color-secundario;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -83,8 +107,8 @@ header {
     }
     
     footer{
-        background-color: #2fcdcd;
-        color: white;
+        background-color: $color-principal;
+        color: $color-secundario;
         overflow: auto;
         display: flex;
         padding: 20px;
@@ -95,7 +119,7 @@ header {
         }
 
         i {
-            color: white;
+            color: $color-secundario;
            
       }
         
@@ -135,7 +159,10 @@ header {
     }
     li a:hover, li a.active{
     background: none;
-    color: aquamarine;
+
+    color: $color-cuarto;
+    
+    
     }
     #check:checked ~ ul{
     left: 0;

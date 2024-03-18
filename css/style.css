@@ -9,6 +9,9 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif; }
 
+.color-5, li a.active, li a:hover {
+  background: blue; }
+
 /* Index  */
 header nav {
   background: #2fcdcd;
@@ -24,7 +27,7 @@ header ul {
     line-height: 80px;
     margin: 0 5px; }
     header ul li a {
-      color: #fff;
+      color: white;
       font-size: 18px;
       padding: 7px 13px;
       border-radius: 3px;
@@ -43,12 +46,11 @@ header ul {
   padding-top: 10px; }
 
 li a.active, li a:hover {
-  background: #000090;
   transition: .5s; }
 
 .checkbtn {
   font-size: 30px;
-  color: #fff;
+  color: white;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -137,6 +139,9 @@ footer {
   .texto {
     padding-top: 30px;
     padding-left: 0; } }
+@media (max-width: 768px) {
+  .texto {
+    animation: none !important; } }
 /* Instrumentos */
 .encabezado {
   background-color: #2fcdcd;
